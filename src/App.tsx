@@ -7,6 +7,7 @@ import About from './Components/About';
 import Price from './Components/Price';
 import Testimonials from './Components/Testimonials';
 import ContactUs from './Components/ContactUs';
+import Footer from './Components/Footer';
 
 export const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -39,7 +40,8 @@ export const App = () => {
       <About />
       <Price />
       <Testimonials />
-      <ContactUs />
+      <ContactUs setSelectedPage={setSelectedPage} />
+      <Footer />
     </div>
   );
 };
