@@ -4,6 +4,7 @@ import Navbar from '@/Components/Nav';
 import Hero from './Components/Hero';
 import Benefits from './Components/Benefits';
 import About from './Components/About';
+import Price from './Components/Price';
 
 export const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -34,6 +35,7 @@ export const App = () => {
       <Hero setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <About />
+      <Price />
     </div>
   );
 };
