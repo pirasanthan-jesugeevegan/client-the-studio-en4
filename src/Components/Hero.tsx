@@ -55,6 +55,9 @@ const Hero = ({ setSelectedPage }: Props) => {
               The Studio EN4 offers exclusive personal training in North London,
               empowering you to look, move, and feel your best.
             </p>
+            <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end md:hidden">
+              <img className="w-[80%]" src={Portfolio} alt="Peter" />
+            </div>
           </motion.div>
           {/* Actions */}
           <motion.div
@@ -81,7 +84,7 @@ const Hero = ({ setSelectedPage }: Props) => {
           </motion.div>
         </div>
         {/* Image */}
-        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end">
+        <div className="md:flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end hidden">
           <img className="w-[80%]" src={Portfolio} alt="Peter" />
         </div>
       </motion.div>

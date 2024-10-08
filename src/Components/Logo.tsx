@@ -3,7 +3,7 @@ const Logo = ({ theme }: { theme: 'light' | 'dark' }) => {
     <a className="flex flex-col items-start" href="#">
       <div className="flex items-baseline">
         <h2
-          className={`text-2xl ${
+          className={`text-2xl w-max ${
             theme === 'light' ? 'text-white' : 'text-black'
           }`}
         >

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { IoMdClose } from 'react-icons/io';
-import { CiMenuFries } from 'react-icons/ci';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+
 import Link from './Link';
 import { SelectedPage } from '@/utils/types';
 import useMediaQuery from '@/hooks/useMediaQuery';
@@ -14,7 +14,7 @@ type Props = {
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
-  const flexBetween = 'flex items-center justify-between';
+  const flexBetween = 'flex items-center justify-end';
   const isAboveMediumScreens = useMediaQuery('(min-width:1060px)');
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const navbarBackground = isTopOfPage ? '' : 'bg-white shadow-lg';
@@ -38,7 +38,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isMenuToggled]);
-
   return (
     <nav>
       <div
@@ -90,7 +89,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   />
                 </div>
 
-                <div className={`${flexBetween} gap-8`}>
+                <div className={`${flexBetween} gap-8 pl-5`}>
                   {/* <p>Sign in</p> */}
                   <ActionButton setSelectedPage={setSelectedPage}>
                     Become a Member
@@ -102,7 +101,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 className="rounded-full bg-secondary-500 p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
-                <CiMenuFries className="h-6 w-6 text-white" />
+                <Bars3Icon className="h-6 w-6 text-white" />
               </button>
             )}
           </div>
@@ -117,7 +116,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           {/* Close Icon */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <IoMdClose className="h-6 w-6 text-white" />
+              <XMarkIcon className="h-6 w-6 text-white" />
             </button>
           </div>
 
