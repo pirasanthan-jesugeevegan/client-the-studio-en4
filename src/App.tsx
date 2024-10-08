@@ -5,6 +5,7 @@ import Hero from './Components/Hero';
 import Benefits from './Components/Benefits';
 import About from './Components/About';
 import Price from './Components/Price';
+import Testimonials from './Components/Testimonials';
 
 export const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -36,6 +37,7 @@ export const App = () => {
       <Benefits setSelectedPage={setSelectedPage} />
       <About />
       <Price />
+      <Testimonials />
     </div>
   );
 };
