@@ -23,11 +23,8 @@ const About = () => {
                   </h1>
                 </div>
               </div>
-              <p
-                data-aos="fade-up"
-                className="leading-8 tracking-wide text-white"
-              >
-                Hi, I'm Peter Mitchell, a fully qualified and insured personal
+              <p data-aos="fade-up" data-aos-delay="300" className="text-white">
+                Hi,I'm Peter Mitchell, a fully qualified and insured personal
                 trainer with years of experience helping clients in some of the
                 top gyms across North London. My passion is to help people
                 transform their bodies, regain confidence, and build sustainable
